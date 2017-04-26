@@ -16,22 +16,29 @@ First you must have local server environment and composer. You can find them on 
 Open Command Prompt/Terminal and go to your  Web server root directory. For WAMP it is c:\wamp\www.
 
 Enter in Command Prompt/Terminal
+
 git clone https://github.com/denisdzafo/Laravel-Product-Quality.git
+
 This will clone project to your web server root directory under name "Laravel-Product-Quality". If you want different name
 then just after link put name of project you want to name it.
 
 After that in Command Prompt/Terminal go in to cloned project and then enter command
+
 composer update
 
 In your administration tool of database create new database. After that import sql file "database.sql" in created database.
 
 Last thing to do is configure  env file. Rename file ".env.example" to ".env".
 You must enter name of your database that you create, your username and password for your administration tool of database
+
 DB_DATABASE=
+
 DB_USERNAME=
+
 DB_PASSWORD=
 
 After that in web browser enter
+
 localhost/name_of_project/public
 
 ---
