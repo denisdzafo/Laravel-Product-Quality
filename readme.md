@@ -43,4 +43,4 @@ localhost/name_of_project/public
 
 ---
 
-If you have some questions send email [denisdzafo@gmail.com](Mailto:hello@devmarketar.io)
+If you have some questions send email [denisdzafo@gmail.com](Mailto:denisdzafo@gmail.com)
