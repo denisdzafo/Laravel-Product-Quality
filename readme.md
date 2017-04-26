@@ -10,18 +10,30 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## How to start app Laravel Product Quality
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+First you must have local server environment and composer. You can find them on internet, it is free. I use WAMP, but you can use what ever you want, depend of your OS.
+Open Command Prompt/Terminal and go to your  Web server root directory. For WAMP it is c:\wamp\www.
 
-## Contributing
+Enter in Command Prompt/Terminal
+git clone https://github.com/denisdzafo/Laravel-Product-Quality.git
+This will clone project to your web server root directory under name "Laravel-Product-Quality". If you want different name
+then just after link put name of project you want to name it.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+After that in Command Prompt/Terminal go in to cloned project and then enter command
+composer update
 
-## Security Vulnerabilities
+In your administration tool of database create new database. After that import sql file "database.sql" in created database.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Last thing to do is configure  env file. Rename file ".env.example" to ".env".
+You must enter name of your database that you create, your username and password for your administration tool of database
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
 
-## License
+After that in web browser enter
+localhost/name_of_project/public
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+---
+
+If you have some questions send email [denisdzafo@gmail.com](Mailto:hello@devmarketar.io)
