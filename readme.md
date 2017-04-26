@@ -37,6 +37,10 @@ DB_USERNAME=
 
 DB_PASSWORD=
 
+In Command prompt enter
+
+php artisan key:generate
+
 After that in web browser enter
 
 localhost/name_of_project/public
