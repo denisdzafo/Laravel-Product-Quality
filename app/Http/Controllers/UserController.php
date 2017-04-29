@@ -62,14 +62,7 @@ class UserController extends Controller
         $user=User::find($id);
         $roles=Role::all();
         $pom=array();
-
-        foreach($roles as $role){
-          if($role->name!='admin'){
-            $pom[$role->id]=$role->name;
-          }
-
-        }
-        return view('users.edit')->withUser($user)->withRoles($pom);
+        return view('users.edit')->withUser($user)->withRoles($roles);
     }
 
     /**

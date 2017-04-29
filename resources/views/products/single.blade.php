@@ -15,8 +15,12 @@
       @if (Auth::check() && Auth::user()->roles->name=="product_manager")
 
       <a href="{{route('products.edit',$product->id)}}" class="btn btn-primary btn-sm">Edit</a>
+      <form class="form-horizontal" role="form"  method="POST" action="{{route ('products.destroy',$product->id)}}">
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+        <input type="hidden" name="_method" value="DELETE"/>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
 
-      <a href="{{route('products.destroy', $product->id)}}" class="btn btn-danger btn-sm">Delete</a>
 
       @endif
       </div>

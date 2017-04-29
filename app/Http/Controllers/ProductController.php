@@ -145,6 +145,6 @@ class ProductController extends Controller
         $product->delete();
 
         Session::flash('success', 'Product has been deleted');
-        return redirect('/');
+        return redirect()->route('index');
     }
 }

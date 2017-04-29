@@ -59,11 +59,11 @@ class RateController extends Controller
         $rate->product_id=$request->product_id;
 
         $rate->save();
+        $products=Product::all();
+        Session::flash('success', 'Rates has successfully added');
 
-        Session::flash('succes', 'Rates has successfully added');
-
-
-
+        $products=Product::all();
+        return view('rates.create')->withProducts($products);
 
 
 

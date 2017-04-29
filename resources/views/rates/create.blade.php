@@ -1,29 +1,52 @@
 @extends('main')
+
 @section('title','| Rate Product')
 
 @section('content')
 <div class="row">
-        <div class="col-md-12">
+      <div class="col-md-10">
+
+
           <h1>Rate product</h1>
           <hr>
-          {!!Form::open(array('route'=>'rates.store') ) !!}
-          {{Form::label('product_id','Product')}}
-          <select class="form-control" name="product_id">
-            @foreach($products as $product)
-              <option value="{{$product->id}}">{{$product->name}}</option>
-            @endforeach
-          </select>
 
-          {{Form::label('name', 'Rate Name')}}
-          {{Form::text('name', null, array('class'=>'form-control'))}}
+          <form class="form-horizontal" action="{{route('rates.store')}}" method="post">
+              <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-          {{Form::label('description', 'Description')}}
-          {{Form::textarea('description', null, array('class'=>'form-control'))}}
+              <div class="form-group">
 
-          {{Form::submit('Add rate', array('class'=>'btn btn-succes btn-lg btn-block'))}}
+                <label class="col-md-2 control-label">Product</label>
+                <div class="col-md-8">
+                  <select class="form-control" name="product_id">
+                    @foreach($products as $product)
+                      <option value="{{$product->id}}">{{$product->name}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
 
-          {!!Form::close()!!}
-        </div>
+              <div class="form-group">
+                <label class="col-md-2 control-label">Name of rate</label>
+                <div class="col-md-8">
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-2 control-label">Description</label>
+                <div class="col-md-8">
+                  <input type="textarea" name="description" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+      							<div class="col-md-3 col-md-offset-2">
+      								<button type="submit" class="btn btn-primary">Add Rate</button>
+      							</div>
+      				</div>
+
+            </form>
+          </div>
 </div>
 
 @endsection
