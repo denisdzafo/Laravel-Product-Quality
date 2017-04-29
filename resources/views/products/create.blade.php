@@ -8,25 +8,55 @@
     <div class="col-md-6 col-offset-3">
       <h1>Create new product</h1>
       <hr>
-      {!!Form::open(array('route'=>'products.store')) !!}
-        {{Form::label('name','Name:') }}
-        {{Form::text('name', null, array('class'=>'form-control')) }}
+      <form class="form-horizontal" role="form"  method="post" action="{{route ('products.store')}}">
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-        {{Form::label('manufacturer','Manufacturer:') }}
-        {{Form::text('manufacturer', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Name</label>
+          <div class="col-md-6">
+            <input type="text" name="name" class="form-control">
+          </div>
+        </div>
 
-        {{Form::label('serial','Serial:') }}
-        {{Form::text('serial', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Manufacturer</label>
+          <div class="col-md-6">
+            <input type="text" name="manufacturer" class="form-control">
+          </div>
+        </div>
 
-        {{Form::label('country','Country:') }}
-        {{Form::text('country', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Serial</label>
+          <div class="col-md-6">
+            <input type="text" name="serial" class="form-control">
+          </div>
+        </div>
 
-        {{Form::label('description','Decription:') }}
-        {{Form::textarea('description', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Country</label>
+          <div class="col-md-6">
+            <input type="text" name="country" class="form-control">
+          </div>
+        </div>
 
-        {{Form::submit('Create Product', array('class'=>'btn btn-success btn-lg btn-block')) }}
-        <hr>
-      {!!Form::close() !!}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Description</label>
+          <div class="col-md-6">
+            <input type="text" name="description" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+							<div class="col-md-6 col-md-offset-4">
+								<button type="submit" class="btn btn-primary">Add Product</button>
+
+							</div>
+						</div>
+
+
+      </form>
+
+      
     </div>
   </div>
 

@@ -5,7 +5,7 @@
 @section('content')
   <div class="row">
     <div class="col-md-8">
-      <a href="/product/public/" class="glyphicon glyphicon-arrow-left"> Back</a>
+      <a href="{{route('index')}}" class="glyphicon glyphicon-arrow-left"> Back</a>
       <h1> {{ $product->name }} </h1>
       <h2>{{$product->manufacturer}}</h2>
       <h3>{{$product->serial}}</h3>

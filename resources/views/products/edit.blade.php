@@ -5,23 +5,51 @@
 @section('content')
 
   <div class="row">
-    {!! Form::model($product, ['route'=>['products.update',$product->id], 'method'=>'Put']) !!}
-    <div class="md-col-8">
 
-      {{Form::label('name','Name:') }}
-      {{Form::text('name', null, array('class'=>'form-control')) }}
+    <div class="col-md-8">
 
-      {{Form::label('manufacturer','Manufacturer:') }}
-      {{Form::text('manufacturer', null, array('class'=>'form-control')) }}
+      <form class="form-horizontal" role="form"  method="post" action="{{route ('products.update',$product->id)}}">
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+        <input type="hidden" name="_method" value="PUT"/>
 
-      {{Form::label('serial','Serial:') }}
-      {{Form::text('serial', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Name</label>
+          <div class="col-md-6">
+            <input type="text" name="name" class="form-control" value= "<?php echo htmlspecialchars($product->name); ?>" >
+          </div>
+        </div>
 
-      {{Form::label('country','Country:') }}
-      {{Form::text('country', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Manufacturer</label>
+          <div class="col-md-6">
+            <input type="text" name="manufacturer" class="form-control" value= "<?php echo htmlspecialchars($product->name); ?>">
+          </div>
+        </div>
 
-      {{Form::label('description','Decription:') }}
-      {{Form::textarea('description', null, array('class'=>'form-control')) }}
+        <div class="form-group">
+          <label class="col-md-4 control-label">Serial</label>
+          <div class="col-md-6">
+            <input type="text" name="serial" class="form-control" value= "<?php echo htmlspecialchars($product->serial); ?>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Country</label>
+          <div class="col-md-6">
+            <input type="text" name="country" class="form-control" value= "<?php echo htmlspecialchars($product->country); ?>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Description</label>
+          <div class="col-md-6">
+            <input type="text" name="description" class="form-control" value= "<?php echo htmlspecialchars($product->description); ?>">
+          </div>
+        </div>
+
+
+
+
     </div>
         <div class="col-md-4">
           <div class="well">
@@ -37,17 +65,19 @@
             <hr>
             <div class="row">
               <div class="col-sm-6">
-                {!! Html::linkRoute('products.show', 'Cancel', array($product->id), array('class'=>'btn btn-danger btn-block')) !!}
+
+                <a href="{{route('index')}}" class="btn btn-danger "> Back</a>
 
               </div>
               <div class="col-sm-6">
-                {{Form::submit('Save Changes', ['class'=>'btn btn-success btn-block'])}}
+
+                <button type="submit" class="btn btn-primary">Edit Product</button>
 
               </div>
             </div>
           </div>
         </div>
-        {!!Form::close() !!}
+        </form>
 
     </div>
 @endsection

@@ -19,7 +19,7 @@
             <div class="product">
               <h1>{{$product->name}}</h1>
 
-              <a href="{{url('product/'.$product->serial)}}" class="btn btn-primary">Read more</a>
+              <a href="{{Route('products.show',$product->id)}}" class="btn btn-primary">Read more</a>
             </div>
 
             <hr>

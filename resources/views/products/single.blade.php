@@ -15,8 +15,8 @@
       @if (Auth::check() && Auth::user()->roles->name=="product_manager")
 
       <a href="{{route('products.edit',$product->id)}}" class="btn btn-primary btn-sm">Edit</a>
-      <hr>
-      <a href="{{route('products.destroy', $product->id)}}" class="btn btn-primary btn-sm">Delete</a>
+
+      <a href="{{route('products.destroy', $product->id)}}" class="btn btn-danger btn-sm">Delete</a>
 
       @endif
       </div>
