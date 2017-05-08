@@ -18,7 +18,7 @@
             @foreach($products as $product)
             <div class="product">
               <h1>{{$product->name}}</h1>
-
+              <p>{{$product->description}}</p>
               <a href="{{Route('products.show',$product->id)}}" class="btn btn-primary">Read more</a>
             </div>
 

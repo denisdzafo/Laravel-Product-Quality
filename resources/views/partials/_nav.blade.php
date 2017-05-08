@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="{{Request::is('/') ? "active":"" }}"><a href="{{route('index')}}">Product</a></li>
-
+        <li class="{{Request::is('rates') ? "active":"" }}"><a href="{{route('rates.index')}}">View rates</a></li>
 
         <li class="{{Request::is('about') ? "active":"" }}"><a href="{{route('about')}}">About</a></li>
         <li class="{{Request::is('contact') ? "active":"" }}"><a href="{{route('contact')}}">Contact</a></li>
@@ -24,7 +24,7 @@
         @endif
         @if (Auth::check() && Auth::user()->roles->name=="rate_manager")
         <li ><a href="{{route('rates.create')}}">Rate product</a></li>
-        <li class="{{Request::is('rates') ? "active":"" }}"><a href="{{route('rates.index')}}">View rates</a></li>
+
         @endif
       </ul>
       <form class="navbar-form navbar-right">

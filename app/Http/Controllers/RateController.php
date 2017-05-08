@@ -19,12 +19,6 @@ class RateController extends Controller
       $rates=Rate::all();
       $products=Product::all();
 
-
-        $cats=array();
-        foreach ($products as $product) {
-          $cats[$product->id]=$product->name;
-        }
-
       return view('rates.show')->withRates($rates)->withProducts($products);
     }
 

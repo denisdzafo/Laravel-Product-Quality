@@ -9,20 +9,24 @@
       @foreach($rates as $rate)
       <div class="rate">
         <h1>{{$rate->name}}</h1>
-        <p>{{$rate->product_id}}</p>
+        <p>{{$rate->description}}</p>
+        <?php
+          $pom="";
+
+          foreach ($products as $product) {
+            if($rate->product_id==$product->id){
+              $pom=$product->name;
+              break;
+            }
+          }
+          echo "<p>This is rat for product: <strong>".$pom."</strong>";
+         ?>
+
       </div>
 
       <hr>
       @endforeach
 
-            @foreach($products as $product)
-            <div class="rate">
-              <h1>{{$product->name}}</h1>
-
-            </div>
-
-            <hr>
-            @endforeach
     </div>
 
 
