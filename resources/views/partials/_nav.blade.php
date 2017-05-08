@@ -18,7 +18,7 @@
 
 
         <li class="{{Request::is('about') ? "active":"" }}"><a href="{{route('about')}}">About</a></li>
-
+        <li class="{{Request::is('contact') ? "active":"" }}"><a href="{{route('contact')}}">Contact</a></li>
         @if (Auth::check() && Auth::user()->roles->name=="product_manager")
           <li class="{{Request::is('products') ? "active":"" }}"><a href="{{route('products.create')}} ">Create New Product</a></li>
         @endif

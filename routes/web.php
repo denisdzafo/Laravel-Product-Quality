@@ -26,7 +26,8 @@ Route::get('product/{serial}', ['as'=>'product.single', 'uses' => 'PagesControll
 //roles
 Route::get('roles/create', 'RolesController@store');
 
-Route::get('contact', 'PagesController@getContact');
+Route::get('pages/contact', ['as'=>'contact', 'uses'=>'PagesController@getContact']);
+Route::post('contact', 'PagesController@postContact');
 
 Route::get('pages/about', ['as'=>'about', 'uses'=> 'PagesController@getAbout']);
 

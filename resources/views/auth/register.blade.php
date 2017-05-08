@@ -69,5 +69,5 @@
 	</div>
 </div>
 
-{{Form::hidden('roles_id',2,['class'=>'form-control'])}}
+
   @endsection
