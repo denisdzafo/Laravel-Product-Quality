@@ -7,10 +7,10 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h1>Product name: {{$product->name}}</h1>
-      <h2>Manufacturer: {{$product->manufacturer}}</h2>
-      <h3>Serial Number: {{$product->serial}}</h3>
-      <h5>Country of Origin: {{$product->country}}</h5>
-      <p>Description: {{$product->description}}</p>
+      <h5><strong>Manufacturer:</strong> {{$product->manufacturer}}</h2>
+      <h5><strong>Serial Number:</strong> {{$product->serial}}</h3>
+      <h5><strong>Country of Origin:</strong> {{$product->country}}</h5>
+      <p><strong>Description:</strong> {{$product->description}}</p>
       <hr>
       @if (Auth::check() && Auth::user()->roles->name=="product_manager")
 

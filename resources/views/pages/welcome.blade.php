@@ -3,13 +3,14 @@
 
     @section('content')
       <div class="row">
-            <div class="jumotron">
+
                 <div class="jumbotron">
-                    <h1>Dobro dosli</h1>
-                    <p class="lead">Hvala vam sto ste posjetili</p>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Popularni post</a></p>
+                    <h1>Welcome</h1>
+                    <p class="lead">Page is currently under construction.</p>
+                    <p>In tab About you can find instructions how to use app</p>
+                    <p>All code you can download on <a href="https://github.com/denisdzafo/Laravel-Product-Quality">Github</a></p>
                 </div>
-            </div>
+            
         </div>
 
         <div class="row">

@@ -41,7 +41,7 @@ class ProductController extends Controller
         $this->validate($request, array(
           'name'=>'required|max:255',
           'manufacturer'=>'required|max:255',
-          'serial'=>'required|Numeric|digits_between:8,11|unique:products,serial',
+          'serial'=>'required|Numeric|unique:products,serial',
           'country'=>'required|max:255',
           'description'=>'required'
         ));
