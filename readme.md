@@ -48,3 +48,4 @@ localhost/name_of_project/public
 ---
 
 If you have some questions send email [denisdzafo@gmail.com](Mailto:denisdzafo@gmail.com)
+You can visit page on http://page-denisdzafo.rhcloud.com/
