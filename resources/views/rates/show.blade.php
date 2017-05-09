@@ -19,7 +19,7 @@
               break;
             }
           }
-          echo "<p>This is rat for product: <strong>".$pom."</strong>";
+          echo "<p>This is rate for product: <strong>".$pom."</strong>";
          ?>
 
       </div>

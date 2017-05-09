@@ -11,7 +11,7 @@ use Session;
 class PagesController extends Controller
 {
     public function getIndex(){
-      $products=Product::orderBy('created_at','desc')->limit(5)->get();
+      $products=Product::orderBy('created_at','desc')->paginate(5);
       return view('pages.welcome')->withProducts($products);
     }
 

@@ -7,10 +7,10 @@
                 <div class="jumbotron">
                     <h1>Welcome</h1>
                     <p class="lead">Page is currently under construction.</p>
-                    <p>In tab About you can find instructions how to use app</p>
+                    <p>In tab About you can find instructions how to use app.</p>
                     <p>All code you can download on <a href="https://github.com/denisdzafo/Laravel-Product-Quality">Github</a></p>
                 </div>
-            
+
         </div>
 
         <div class="row">
@@ -27,6 +27,10 @@
             @endforeach
           </div>
 
+
+        </div>
+        <div class="text-center">
+          {!!$products->links(); !!}
         </div>
 
       @endsection
